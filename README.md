@@ -6,4 +6,7 @@ We have a matrix nxn with position (1, 1): where we get started and position (n,
 1. We need to install cmake
 2. We need to install qt5:
   `sudo apt install qt5-default`
-3. After cloning, we 
+3. After cloning, we need to go the directory: cmake-build-debug
+4. `cmake ..`
+5. `make`
+6. `./MyGame`
