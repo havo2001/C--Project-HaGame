@@ -5,5 +5,5 @@ We have a matrix nxn with position (1, 1): where we get started and position (n,
 # Run
 1. We need to install cmake
 2. We need to install qt5:
-  sudo apt install qt5-default
+  `sudo apt install qt5-default`
 3. After cloning, we 
