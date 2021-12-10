@@ -2,7 +2,7 @@
 
 #include<QBrush>
 #include<QDebug>
-#include "hagame.h"
+#include "../header/hagame.h"
 const int xStart = 400;
 const int yStart = 100;
 const int itemSize = 80;
