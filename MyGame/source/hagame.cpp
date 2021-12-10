@@ -1,4 +1,4 @@
-#include "hagame.h"
+#include "../header/hagame.h"
 
 const int fixedSize = 6;
 const int blank = 0;
