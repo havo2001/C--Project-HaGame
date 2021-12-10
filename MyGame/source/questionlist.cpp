@@ -1,4 +1,4 @@
-#include "questionlist.h"
+#include "../header/questionlist.h"
 const std::pair<int, int> questionSize(350, 270);
 const std::pair<int, int> questionPos(30, 250);
 questionlist::questionlist(QGraphicsItem *parent) : QGraphicsPixmapItem(parent) {
