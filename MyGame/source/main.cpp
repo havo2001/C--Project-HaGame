@@ -1,6 +1,6 @@
 #include <QApplication>
-#include "hagame.h"
-#include "menu.h"
+#include "../header/hagame.h"
+#include "../header/menu.h"
 
 HaGame *newGame;
 
