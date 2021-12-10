@@ -12,21 +12,13 @@ set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.1\\mingw81_64\\lib\\cmake")
 find_package(Qt5Widgets REQUIRED)
 
 add_executable(MyGame
-        hagame.cpp
-        hagame.h
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        menu.cpp
-        menu.h
-        object.cpp
-        object.h
-        questionlist.cpp
-        questionlist.h
-        score.cpp
-        score.h
-        source.qrc)
+        source/hagame.cpp
+        source/main.cpp
+        source/menu.cpp
+        source/object.cpp
+        source/questionlist.cpp
+        source/score.cpp
+        resource/source.qrc)
 
 target_link_libraries(MyGame Qt5::Widgets)
 
