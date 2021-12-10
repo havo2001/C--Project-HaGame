@@ -1,4 +1,4 @@
-#include "menu.h"
+#include "../header/menu.h"
 const int widthSize = 900;
 const int heightSize = 600;
 menu::menu(QGraphicsItem *parent) : QGraphicsPixmapItem(parent) {
