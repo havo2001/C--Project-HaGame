@@ -1,4 +1,4 @@
-#include "object.h"
+#include "../header/object.h"
 
 #include<QBrush>
 #include<QDebug>
