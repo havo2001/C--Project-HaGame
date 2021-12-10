@@ -12,6 +12,11 @@ set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.1\\mingw81_64\\lib\\cmake")
 find_package(Qt5Widgets REQUIRED)
 
 add_executable(MyGame
+        header/hagame.h
+	header/menu.h
+	header/object.h
+	header/score.h
+	header/questionlist.h
         source/hagame.cpp
         source/main.cpp
         source/menu.cpp
