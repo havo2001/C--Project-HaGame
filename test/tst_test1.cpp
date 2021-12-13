@@ -1,5 +1,5 @@
 #include <QtTest>
-#include <hagame.h>
+#include <include/hagame.h>
 
 // add necessary includes here
 
