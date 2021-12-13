@@ -1,4 +1,4 @@
-#include "score.h"
+#include "include/score.h"
 #include <QFont>
 #include <QFontDatabase>
 
