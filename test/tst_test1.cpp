@@ -1,5 +1,6 @@
 #include <QtTest>
 #include <include/hagame.h>
+#include <include/object>
 
 // add necessary includes here
 
@@ -13,13 +14,13 @@ public:
 
 private slots:
     void test_case1();
-
+    void test_case2();
+    void test_case3();
 };
 
 test1::test1()
 {
-   QCOMPARE(2, GetCoordX(560));
-   QCOMPARE(1, GetCoordY(180));
+
 }
 
 test1::~test1()
@@ -29,7 +30,16 @@ test1::~test1()
 
 void test1::test_case1()
 {
+   QCOMPARE(GetCoordX(560), 2);
+}
 
+void test1::test_case2() {
+     QCOMPARE(GetCoordY(180), 1);
+}
+
+void test1::test_case3() {
+    QString str = "Down";
+    QCOMPARE(str.getDirection(), QString("Down"));
 }
 
 QTEST_APPLESS_MAIN(test1)
