@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Draw.cpp
+Draw.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Draw.h
+iostream
+-
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Draw.h
+windows.h
+-
+Object.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Object.h
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Input.h
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Object.cpp
+Object.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Object.h
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Object.h
+Input.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Input.h
+
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/main.cpp
+iostream
+-
+conio.h
+-
+windows.h
+-
+Draw.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Draw.h
+Input.h
+C:/Users/thuha/CLionProject/PROJECTC++PRACTICE/Input.h
+
