@@ -9,4 +9,4 @@ We have a matrix nxn with position (1, 1): where we get started and position (n,
 3. After cloning, we need to go the directory: cmake-build-debug
 4. `cmake ..`
 5. `make`
-6. `./MyGame`
+6. `./C--Project-HaGame`
