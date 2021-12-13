@@ -1,4 +1,4 @@
-#include "hagame.h"
+#include "include/hagame.h"
 
 //Constant value
 const int fixedSize = 6;
