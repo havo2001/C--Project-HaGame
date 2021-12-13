@@ -6,5 +6,5 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES +=  tst_test1.cpp src/hagame.cpp
-HEADERS += include/hagame.h
+SOURCES +=  tst_test1.cpp src/hagame.cpp src/object.cpp
+HEADERS += include/hagame.h include/object.h
