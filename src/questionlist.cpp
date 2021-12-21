@@ -1,9 +1,11 @@
 #include "include/questionlist.h"
+
 const std::pair<int, int> questionSize(350, 270);
 const std::pair<int, int> questionPos(30, 250);
+const QString frameImage = ":/image/frame.png";
 
 questionlist::questionlist(QGraphicsItem *parent) : QGraphicsPixmapItem(parent) {
-  setPixmap(QPixmap(":/image/frame.png").scaled(questionSize.first, questionSize.second));
+  setPixmap(QPixmap(frameImage).scaled(questionSize.first, questionSize.second));
   setPos(questionPos.first, questionPos.second);
 }
 
@@ -349,7 +351,7 @@ bool questionlist::answer(int i, int variant) {
     }
   }
   return true;
-
 }
+
 
 
