@@ -3,12 +3,16 @@
 #include<QBrush>
 #include<QDebug>
 
+#include<QBrush>
+#include<QDebug>
+
 const int xStart = 400;
 const int yStart = 100;
 const int itemSize = 80;
+const QString objectImage = ":/image/object.png";
 
 object::object(QGraphicsItem *parent) : QGraphicsPixmapItem(parent) {
-  setPixmap(QPixmap(":/image/object.png").scaled(itemSize, itemSize));
+  setPixmap(QPixmap(objectImage).scaled(itemSize, itemSize));
   setPos(xStart, yStart);
   setDirection("STOP");
 }
