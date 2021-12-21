@@ -34,7 +34,8 @@ const QString fontPath = ":/font/AmongYou-BWdWw.ttf";
 const QString fontName = "a Among You";
 const QString passImage = ":/image/pass.png";
 const QString notPassImage = ":/image/notpass.png";
-
+const QString backgroundImage = ":/image/background.jpg";
+const QString matrixImage = ":/image/matrix.png";
 
 HaGame::HaGame(QWidget *parent) : QGraphicsView(parent) {
   posX = xStart;
@@ -94,12 +95,12 @@ HaGame::HaGame(QWidget *parent) : QGraphicsView(parent) {
   scene = new QGraphicsScene(this);
   scene->setSceneRect(xOrigin, yOrigin, widthSize, heightSize);
   QGraphicsPixmapItem *bg = new QGraphicsPixmapItem();
-  bg->setPixmap(QPixmap(":/image/background.jpg").scaled(widthSize, heightSize));
+  bg->setPixmap(QPixmap(backgroundImage).scaled(widthSize, heightSize));
   scene->addItem(bg);
 
   //Set the grid image
   QGraphicsPixmapItem *grid = new QGraphicsPixmapItem();
-  grid->setPixmap(QPixmap(":/image/matrix.png").scaled(gridSize, gridSize));
+  grid->setPixmap(QPixmap(matrixImage).scaled(gridSize, gridSize));
   grid->setPos(xStart, yStart);
   scene->addItem(grid);
 
