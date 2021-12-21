@@ -27,6 +27,13 @@ const QString information = "Press the key 1, 2, 3 to answer the question";
 const int fontQuestion = 15;
 const int fontNote = 8;
 const int fontMenu = 20;
+const QString rockImage = ":/image/rock.png";
+const QString questionImage = ":/image/question.png";
+const QString prizeImage = ":/image/prize.png";
+const QString fontPath = ":/font/AmongYou-BWdWw.ttf";
+const QString fontName = "a Among You";
+const QString passImage = ":/image/pass.png";
+const QString notPassImage = ":/image/notpass.png";
 
 
 HaGame::HaGame(QWidget *parent) : QGraphicsView(parent) {
@@ -102,21 +109,21 @@ HaGame::HaGame(QWidget *parent) : QGraphicsView(parent) {
           if (matrix[xIter][yIter] == rockValue) {
               //Rocks
               rock[xIter][yIter]= new QGraphicsPixmapItem();
-              rock[xIter][yIter]->setPixmap(QPixmap(":/image/rock.png").scaled(itemSize, itemSize));
+              rock[xIter][yIter]->setPixmap(QPixmap(rockImage).scaled(itemSize, itemSize));
               rock[xIter][yIter]->setPos(xStart + xIter*itemSize, yStart + yIter*itemSize);
               scene->addItem(rock[xIter][yIter]);
 
           } else if (matrix[xIter][yIter] == questionValue) {
               //Questions
               question[xIter][yIter] = new QGraphicsPixmapItem();
-              question[xIter][yIter]->setPixmap(QPixmap(":/image/question.png").scaled(itemSize, itemSize));
+              question[xIter][yIter]->setPixmap(QPixmap(questionImage).scaled(itemSize, itemSize));
               question[xIter][yIter]->setPos(xStart + xIter*itemSize, yStart + yIter*itemSize);
               scene->addItem(question[xIter][yIter]);
 
           } else if (matrix[xIter][yIter] == prizeValue) {
               //Prizes
               QGraphicsPixmapItem *prize = new QGraphicsPixmapItem();
-              prize->setPixmap(QPixmap(":/image/prize.png").scaled(itemSize, itemSize));
+              prize->setPixmap(QPixmap(prizeImage).scaled(itemSize, itemSize));
               prize->setPos(xStart + xIter*itemSize, yStart + yIter*itemSize);
               scene->addItem(prize);
           }
@@ -177,8 +184,8 @@ void HaGame::GetQuestion() {
     numberQuestion = Random(1, questionAmount);
     QString quiz = questionObject->content(numberQuestion);
     text = new QGraphicsTextItem(quiz);
-    QFontDatabase::addApplicationFont(":/font/AmongYou-BWdWw.ttf");
-    QFont font("a Among You", fontQuestion);
+    QFontDatabase::addApplicationFont(fontPath);
+    QFont font(fontName, fontQuestion);
     text->setFont(font);
     text->setPos(questionPos.first, questionPos.second);
     text->setDefaultTextColor(QColor(125, 211, 217, 255));
@@ -186,7 +193,7 @@ void HaGame::GetQuestion() {
 
     QString info = information;
     note = new QGraphicsTextItem(info);
-    QFont font2("a Among You", fontNote);
+    QFont font2(fontName, fontNote);
     note->setFont(font2);
     note->setPos(infoPos.first, infoPos.second);
     note->setDefaultTextColor(QColor("white"));
@@ -201,7 +208,7 @@ void HaGame::AnswerQuestion() {
       scene->removeItem(questionObject);
       scene->removeItem(text);
       scene->removeItem(note);
-      question[GetCoordX(posX)][GetCoordY(posY)]->setPixmap(QPixmap(":/image/pass.png").scaled(itemSize, itemSize));
+      question[GetCoordX(posX)][GetCoordY(posY)]->setPixmap(QPixmap(passImage).scaled(itemSize, itemSize));
       matrix[GetCoordX(posX)][GetCoordY(posY)] = blank; // if answer is true
       if (totalCorrect == totalQuestion) {
         gameScore->setScore(gameScore->getScore() + cost);
@@ -217,7 +224,7 @@ void HaGame::AnswerQuestion() {
       scene->removeItem(questionObject);
       scene->removeItem(text);
       scene->removeItem(note);
-      question[GetCoordX(posX)][GetCoordY(posY)]->setPixmap(QPixmap(":/image/notpass.png").scaled(itemSize, itemSize));
+      question[GetCoordX(posX)][GetCoordY(posY)]->setPixmap(QPixmap(notPassImage).scaled(itemSize, itemSize));
       matrix[GetCoordX(posX)][GetCoordY(posY)] = rockValue; // if answer is false
       variant = 0;
       numberQuestion = 0;
@@ -274,8 +281,8 @@ void HaGame::WinMenu() {
   }
   QString total = QString::number(gameScore->getScore());
   text = new QGraphicsTextItem(total);
-  QFontDatabase::addApplicationFont(":/font/AmongYou-BWdWw.ttf");
-  QFont font("a Among You", fontMenu);
+  QFontDatabase::addApplicationFont(fontPath);
+  QFont font(fontName, fontMenu);
   text->setFont(font);
   text->setPos(scoreDisplay.first, scoreDisplay.second);
   text->setDefaultTextColor(QColor("white"));
@@ -376,5 +383,5 @@ void HaGame::start() {
   scene->addItem(mainObject);
   gameScore->setScore(0);
   gameScore->setVisible(false);
-
 }
+
